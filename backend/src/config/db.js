@@ -7,7 +7,7 @@ await mongoose.connect(MONGO_URI, {
 autoIndex: true,
 serverSelectionTimeoutMS: 10000,
 });
-console.log('✅ MongoDB connected');
+console.log('MongoDB connected');
 }
 
 async function disconnectDB() {

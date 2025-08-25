@@ -33,7 +33,7 @@ async function start() {
   require('./sockets')(io);
 
   server.listen(port, () => {
-    console.log(`🚀 Server listening on http://localhost:${port} [${NODE_ENV}]`);
+    console.log(`Server listening on http://localhost:${port} [${NODE_ENV}]`);
   });
 
   const stop = async () => {
