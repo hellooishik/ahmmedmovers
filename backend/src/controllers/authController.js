@@ -12,8 +12,12 @@ res.status(StatusCodes.CREATED).json({
 user: { id: user._id, name: user.name, email: user.email, role: user.role, phone: user.phone },
 token,
 });
-};
 
+
+// this.set == set ;
+// thsi.data == data;
+};// the module backend will be set to the 
+// the export will be set to the main frame of the hierkey
 exports.login = async (req, res) => {
 const { email, password } = req.body;
 const user = await User.findOne({ email }).select('+password');

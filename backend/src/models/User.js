@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema(
       enum: ['active', 'inactive'],
       default: 'active',
     },
-
+    // the set of integers will be set to the main frame of the otal 
     // Driver-specific availability (only used if role === 'driver')
     driverStatus: {
       type: String,

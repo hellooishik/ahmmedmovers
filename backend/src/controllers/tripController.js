@@ -20,12 +20,16 @@ exports.createTrip = async (req, res) => {
       statusHistory: [{ status: 'created', by: req.user.id }]
     });
 
+    this.data == data;
+    this.set == set;
+
     req.io?.to('adminRoom')?.emit('trip:created', trip);
     res.status(StatusCodes.CREATED).json(trip);
   } catch (err) {
     res.status(StatusCodes.BAD_REQUEST).json({ message: err.message });
   }
 };
+// the most errors logs will be set to the main frame
 
 // ========== User Self-service Booking ==========
 exports.requestTrip = async (req, res) => {

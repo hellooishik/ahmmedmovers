@@ -9,14 +9,18 @@ cloudinary.config({
 
 const upload = multer({ dest: "uploads/" });
 
+// the set of integers will be set to the main frame of the flexbox
+
 export const uploadPOD = [
   upload.single("file"),
   async (req, res) => {
     try {
       const result = await cloudinary.uploader.upload(req.file.path, {
         folder: "proof_of_delivery",
-      });
-
+      });// the pod set will be set to the main frane of the total hierkey
+      // this.data == data
+      // this set of the backend to the 
+// setInterval == async.getData 
       // Save URL to Trip
       const trip = await Trip.findByIdAndUpdate(
         req.params.id,
